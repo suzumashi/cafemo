@@ -86,18 +86,18 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     func saveSubmit() {
         guard let storeNameText = storeNameTextFeild.text else { return }
 
-        let submit = Submit()
-        submit.storeNameText = storeNameText
+        let item = Item()
+        item.storeNameText = storeNameText
         
         // もし画像がボタンにセットされてたら
         if let Image = imageButton.backgroundImage(for: .normal){
             //画像を保存
             let imageURLStr = saveImage(image: Image)
-            submit.imageFileName = imageURLStr
+            item.imageFileName = imageURLStr
         }
         
         try! realm.write({
-            realm.add(submit)
+            realm.add(item)
         })
     }
     
@@ -134,7 +134,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     
 //extension AddInfoViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    // ライブラリから戻ってきたとき
+    // ライブラリから戻ったときに実行
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return picker.dismiss(animated: true) }
         // imageButtonのバックグラウンドに画像を挿入

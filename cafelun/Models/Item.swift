@@ -8,7 +8,7 @@
 import Foundation
 import RealmSwift
 
-class Submit: Object {
+class Item: Object {
     @objc dynamic var storeNameText: String = ""
     @objc dynamic var imageFileName: String?
 }

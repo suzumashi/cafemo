@@ -15,7 +15,7 @@ class WantViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     let realm = try! Realm()
 
-    var collection = [Submit]()
+    var collection = [Item]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class WantViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getTweetData() {
-        collection = Array(realm.objects(Submit.self)).reversed()  // Realm DBから保存されてるツイートを全取得
+        collection = Array(realm.objects(Item.self)).reversed()  // Realm DBから保存されてるツイートを全取得
         collectionView.reloadData() // テーブルビューをリロード
     }
 

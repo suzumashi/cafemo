@@ -20,7 +20,7 @@
 		E6728C512840671B000443AD /* README_E in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4A2840671B000443AD /* README_E */; };
 		E6728C522840671B000443AD /* LICENSE_E in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4B2840671B000443AD /* LICENSE_E */; };
 		E6728C532840671B000443AD /* LICENSE_J in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4C2840671B000443AD /* LICENSE_J */; };
-		E6728C56284067C4000443AD /* Submit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6728C55284067C4000443AD /* Submit.swift */; };
+		E6728C56284067C4000443AD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6728C55284067C4000443AD /* Item.swift */; };
 		E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */; };
 		E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9312839D9B3007F39AA /* AppDelegate.swift */; };
 		E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */; };
@@ -65,7 +65,7 @@
 		E6728C4A2840671B000443AD /* README_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_E; sourceTree = "<group>"; };
 		E6728C4B2840671B000443AD /* LICENSE_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_E; sourceTree = "<group>"; };
 		E6728C4C2840671B000443AD /* LICENSE_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_J; sourceTree = "<group>"; };
-		E6728C55284067C4000443AD /* Submit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submit.swift; sourceTree = "<group>"; };
+		E6728C55284067C4000443AD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		E6F4D92E2839D9B3007F39AA /* cafelun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafelun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4D9312839D9B3007F39AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		E6728C5428406724000443AD /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E6728C55284067C4000443AD /* Submit.swift */,
+				E6728C55284067C4000443AD /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -383,7 +383,7 @@
 				E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */,
 				E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */,
 				E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */,
-				E6728C56284067C4000443AD /* Submit.swift in Sources */,
+				E6728C56284067C4000443AD /* Item.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
