@@ -1,0 +1,754 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E648BCF0283DE46D001ACCE4 /* saveButton.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E648BCEF283DE46D001ACCE4 /* saveButton.PNG */; };
+		E648BD08283F4096001ACCE4 /* cameraIcon.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E648BD07283F4096001ACCE4 /* cameraIcon.PNG */; };
+		E648BD0B283F4350001ACCE4 /* want.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E648BD09283F4350001ACCE4 /* want.PNG */; };
+		E648BD0C283F4350001ACCE4 /* went.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E648BD0A283F4350001ACCE4 /* went.PNG */; };
+		E6728C3D283F5081000443AD /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E6728C3C283F5081000443AD /* Realm */; };
+		E6728C3F283F5081000443AD /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E6728C3E283F5081000443AD /* RealmSwift */; };
+		E6728C4D2840671B000443AD /* 利用前にお読みください.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6728C452840671B000443AD /* 利用前にお読みください.txt */; };
+		E6728C4E2840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = E6728C462840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt */; };
+		E6728C4F2840671B000443AD /* nicomoji-plus_1.11.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E6728C472840671B000443AD /* nicomoji-plus_1.11.ttf */; };
+		E6728C502840671B000443AD /* README_J in Resources */ = {isa = PBXBuildFile; fileRef = E6728C492840671B000443AD /* README_J */; };
+		E6728C512840671B000443AD /* README_E in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4A2840671B000443AD /* README_E */; };
+		E6728C522840671B000443AD /* LICENSE_E in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4B2840671B000443AD /* LICENSE_E */; };
+		E6728C532840671B000443AD /* LICENSE_J in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4C2840671B000443AD /* LICENSE_J */; };
+		E6728C56284067C4000443AD /* Submit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6728C55284067C4000443AD /* Submit.swift */; };
+		E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */; };
+		E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9312839D9B3007F39AA /* AppDelegate.swift */; };
+		E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */; };
+		E6F4D9362839D9B3007F39AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9352839D9B3007F39AA /* ViewController.swift */; };
+		E6F4D9392839D9B3007F39AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4D9372839D9B3007F39AA /* Main.storyboard */; };
+		E6F4D93B2839D9B4007F39AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6F4D93A2839D9B4007F39AA /* Assets.xcassets */; };
+		E6F4D93E2839D9B4007F39AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6F4D93C2839D9B4007F39AA /* LaunchScreen.storyboard */; };
+		E6F4D9492839D9B5007F39AA /* cafelunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9482839D9B5007F39AA /* cafelunTests.swift */; };
+		E6F4D9532839D9B5007F39AA /* cafelunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9522839D9B5007F39AA /* cafelunUITests.swift */; };
+		E6F4D9552839D9B5007F39AA /* cafelunUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9542839D9B5007F39AA /* cafelunUITestsLaunchTests.swift */; };
+		E6F4D96E2839E451007F39AA /* WentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96D2839E451007F39AA /* WentViewController.swift */; };
+		E6F4D9702839E473007F39AA /* WantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96F2839E473007F39AA /* WantViewController.swift */; };
+		E6F4D976283A2E06007F39AA /* plusButton.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E6F4D975283A2E06007F39AA /* plusButton.PNG */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E6F4D9452839D9B5007F39AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F4D9262839D9B3007F39AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F4D92D2839D9B3007F39AA;
+			remoteInfo = cafelun;
+		};
+		E6F4D94F2839D9B5007F39AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E6F4D9262839D9B3007F39AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F4D92D2839D9B3007F39AA;
+			remoteInfo = cafelun;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E648BCEF283DE46D001ACCE4 /* saveButton.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = saveButton.PNG; sourceTree = "<group>"; };
+		E648BD07283F4096001ACCE4 /* cameraIcon.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cameraIcon.PNG; sourceTree = "<group>"; };
+		E648BD09283F4350001ACCE4 /* want.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = want.PNG; sourceTree = "<group>"; };
+		E648BD0A283F4350001ACCE4 /* went.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = went.PNG; sourceTree = "<group>"; };
+		E6728C452840671B000443AD /* 利用前にお読みください.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "利用前にお読みください.txt"; sourceTree = "<group>"; };
+		E6728C462840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt"; sourceTree = "<group>"; };
+		E6728C472840671B000443AD /* nicomoji-plus_1.11.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nicomoji-plus_1.11.ttf"; sourceTree = "<group>"; };
+		E6728C492840671B000443AD /* README_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_J; sourceTree = "<group>"; };
+		E6728C4A2840671B000443AD /* README_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README_E; sourceTree = "<group>"; };
+		E6728C4B2840671B000443AD /* LICENSE_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_E; sourceTree = "<group>"; };
+		E6728C4C2840671B000443AD /* LICENSE_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_J; sourceTree = "<group>"; };
+		E6728C55284067C4000443AD /* Submit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Submit.swift; sourceTree = "<group>"; };
+		E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		E6F4D92E2839D9B3007F39AA /* cafelun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafelun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F4D9312839D9B3007F39AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E6F4D9352839D9B3007F39AA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6F4D9382839D9B3007F39AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E6F4D93A2839D9B4007F39AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E6F4D93D2839D9B4007F39AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E6F4D93F2839D9B4007F39AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F4D9442839D9B5007F39AA /* cafelunTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cafelunTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F4D9482839D9B5007F39AA /* cafelunTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafelunTests.swift; sourceTree = "<group>"; };
+		E6F4D94E2839D9B5007F39AA /* cafelunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cafelunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6F4D9522839D9B5007F39AA /* cafelunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafelunUITests.swift; sourceTree = "<group>"; };
+		E6F4D9542839D9B5007F39AA /* cafelunUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafelunUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6F4D96D2839E451007F39AA /* WentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WentViewController.swift; path = cafelun/WentViewController.swift; sourceTree = SOURCE_ROOT; };
+		E6F4D96F2839E473007F39AA /* WantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantViewController.swift; sourceTree = "<group>"; };
+		E6F4D975283A2E06007F39AA /* plusButton.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusButton.PNG; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E6F4D92B2839D9B3007F39AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6728C3F283F5081000443AD /* RealmSwift in Frameworks */,
+				E6728C3D283F5081000443AD /* Realm in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D9412839D9B5007F39AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D94B2839D9B5007F39AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E6728C432840671B000443AD /* font */ = {
+			isa = PBXGroup;
+			children = (
+				E6728C442840671B000443AD /* nicomoji-plus */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		E6728C442840671B000443AD /* nicomoji-plus */ = {
+			isa = PBXGroup;
+			children = (
+				E6728C452840671B000443AD /* 利用前にお読みください.txt */,
+				E6728C462840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt */,
+				E6728C472840671B000443AD /* nicomoji-plus_1.11.ttf */,
+				E6728C482840671B000443AD /* mplus-TESTFLIGHT-058 */,
+			);
+			path = "nicomoji-plus";
+			sourceTree = "<group>";
+		};
+		E6728C482840671B000443AD /* mplus-TESTFLIGHT-058 */ = {
+			isa = PBXGroup;
+			children = (
+				E6728C492840671B000443AD /* README_J */,
+				E6728C4A2840671B000443AD /* README_E */,
+				E6728C4B2840671B000443AD /* LICENSE_E */,
+				E6728C4C2840671B000443AD /* LICENSE_J */,
+			);
+			path = "mplus-TESTFLIGHT-058";
+			sourceTree = "<group>";
+		};
+		E6728C5428406724000443AD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E6728C55284067C4000443AD /* Submit.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E6F4D9252839D9B3007F39AA = {
+			isa = PBXGroup;
+			children = (
+				E6F4D9302839D9B3007F39AA /* cafelun */,
+				E6F4D9472839D9B5007F39AA /* cafelunTests */,
+				E6F4D9512839D9B5007F39AA /* cafelunUITests */,
+				E6F4D92F2839D9B3007F39AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E6F4D92F2839D9B3007F39AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E6F4D92E2839D9B3007F39AA /* cafelun.app */,
+				E6F4D9442839D9B5007F39AA /* cafelunTests.xctest */,
+				E6F4D94E2839D9B5007F39AA /* cafelunUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E6F4D9302839D9B3007F39AA /* cafelun */ = {
+			isa = PBXGroup;
+			children = (
+				E6F4D9612839DFA0007F39AA /* cafelun_Resources */,
+				E6F4D9312839D9B3007F39AA /* AppDelegate.swift */,
+				E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */,
+				E6F4D9352839D9B3007F39AA /* ViewController.swift */,
+				E6F4D96D2839E451007F39AA /* WentViewController.swift */,
+				E6F4D96F2839E473007F39AA /* WantViewController.swift */,
+				E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */,
+				E6728C5428406724000443AD /* Models */,
+				E6F4D9372839D9B3007F39AA /* Main.storyboard */,
+				E6F4D93A2839D9B4007F39AA /* Assets.xcassets */,
+				E6F4D93C2839D9B4007F39AA /* LaunchScreen.storyboard */,
+				E6F4D93F2839D9B4007F39AA /* Info.plist */,
+			);
+			path = cafelun;
+			sourceTree = "<group>";
+		};
+		E6F4D9472839D9B5007F39AA /* cafelunTests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F4D9482839D9B5007F39AA /* cafelunTests.swift */,
+			);
+			path = cafelunTests;
+			sourceTree = "<group>";
+		};
+		E6F4D9512839D9B5007F39AA /* cafelunUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E6F4D9522839D9B5007F39AA /* cafelunUITests.swift */,
+				E6F4D9542839D9B5007F39AA /* cafelunUITestsLaunchTests.swift */,
+			);
+			path = cafelunUITests;
+			sourceTree = "<group>";
+		};
+		E6F4D9612839DFA0007F39AA /* cafelun_Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E6728C432840671B000443AD /* font */,
+				E6F4D9622839DFA0007F39AA /* Images */,
+			);
+			path = cafelun_Resources;
+			sourceTree = "<group>";
+		};
+		E6F4D9622839DFA0007F39AA /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E648BD07283F4096001ACCE4 /* cameraIcon.PNG */,
+				E648BCEF283DE46D001ACCE4 /* saveButton.PNG */,
+				E6F4D975283A2E06007F39AA /* plusButton.PNG */,
+				E648BD09283F4350001ACCE4 /* want.PNG */,
+				E648BD0A283F4350001ACCE4 /* went.PNG */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E6F4D92D2839D9B3007F39AA /* cafelun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F4D9582839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelun" */;
+			buildPhases = (
+				E6F4D92A2839D9B3007F39AA /* Sources */,
+				E6F4D92B2839D9B3007F39AA /* Frameworks */,
+				E6F4D92C2839D9B3007F39AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cafelun;
+			packageProductDependencies = (
+				E6728C3C283F5081000443AD /* Realm */,
+				E6728C3E283F5081000443AD /* RealmSwift */,
+			);
+			productName = cafelun;
+			productReference = E6F4D92E2839D9B3007F39AA /* cafelun.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E6F4D9432839D9B5007F39AA /* cafelunTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F4D95B2839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelunTests" */;
+			buildPhases = (
+				E6F4D9402839D9B5007F39AA /* Sources */,
+				E6F4D9412839D9B5007F39AA /* Frameworks */,
+				E6F4D9422839D9B5007F39AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F4D9462839D9B5007F39AA /* PBXTargetDependency */,
+			);
+			name = cafelunTests;
+			productName = cafelunTests;
+			productReference = E6F4D9442839D9B5007F39AA /* cafelunTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E6F4D94D2839D9B5007F39AA /* cafelunUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E6F4D95E2839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelunUITests" */;
+			buildPhases = (
+				E6F4D94A2839D9B5007F39AA /* Sources */,
+				E6F4D94B2839D9B5007F39AA /* Frameworks */,
+				E6F4D94C2839D9B5007F39AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E6F4D9502839D9B5007F39AA /* PBXTargetDependency */,
+			);
+			name = cafelunUITests;
+			productName = cafelunUITests;
+			productReference = E6F4D94E2839D9B5007F39AA /* cafelunUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E6F4D9262839D9B3007F39AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					E6F4D92D2839D9B3007F39AA = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
+					E6F4D9432839D9B5007F39AA = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = E6F4D92D2839D9B3007F39AA;
+					};
+					E6F4D94D2839D9B5007F39AA = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = E6F4D92D2839D9B3007F39AA;
+					};
+				};
+			};
+			buildConfigurationList = E6F4D9292839D9B3007F39AA /* Build configuration list for PBXProject "cafelun" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E6F4D9252839D9B3007F39AA;
+			packageReferences = (
+				E6728C3B283F5081000443AD /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
+			productRefGroup = E6F4D92F2839D9B3007F39AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E6F4D92D2839D9B3007F39AA /* cafelun */,
+				E6F4D9432839D9B5007F39AA /* cafelunTests */,
+				E6F4D94D2839D9B5007F39AA /* cafelunUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E6F4D92C2839D9B3007F39AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F4D93E2839D9B4007F39AA /* LaunchScreen.storyboard in Resources */,
+				E6728C512840671B000443AD /* README_E in Resources */,
+				E648BCF0283DE46D001ACCE4 /* saveButton.PNG in Resources */,
+				E6F4D976283A2E06007F39AA /* plusButton.PNG in Resources */,
+				E6728C532840671B000443AD /* LICENSE_J in Resources */,
+				E648BD08283F4096001ACCE4 /* cameraIcon.PNG in Resources */,
+				E6F4D93B2839D9B4007F39AA /* Assets.xcassets in Resources */,
+				E6728C4D2840671B000443AD /* 利用前にお読みください.txt in Resources */,
+				E6F4D9392839D9B3007F39AA /* Main.storyboard in Resources */,
+				E6728C522840671B000443AD /* LICENSE_E in Resources */,
+				E6728C502840671B000443AD /* README_J in Resources */,
+				E6728C4F2840671B000443AD /* nicomoji-plus_1.11.ttf in Resources */,
+				E6728C4E2840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt in Resources */,
+				E648BD0B283F4350001ACCE4 /* want.PNG in Resources */,
+				E648BD0C283F4350001ACCE4 /* went.PNG in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D9422839D9B5007F39AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D94C2839D9B5007F39AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E6F4D92A2839D9B3007F39AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F4D96E2839E451007F39AA /* WentViewController.swift in Sources */,
+				E6F4D9362839D9B3007F39AA /* ViewController.swift in Sources */,
+				E6F4D9702839E473007F39AA /* WantViewController.swift in Sources */,
+				E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */,
+				E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */,
+				E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */,
+				E6728C56284067C4000443AD /* Submit.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D9402839D9B5007F39AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F4D9492839D9B5007F39AA /* cafelunTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E6F4D94A2839D9B5007F39AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6F4D9532839D9B5007F39AA /* cafelunUITests.swift in Sources */,
+				E6F4D9552839D9B5007F39AA /* cafelunUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E6F4D9462839D9B5007F39AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F4D92D2839D9B3007F39AA /* cafelun */;
+			targetProxy = E6F4D9452839D9B5007F39AA /* PBXContainerItemProxy */;
+		};
+		E6F4D9502839D9B5007F39AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E6F4D92D2839D9B3007F39AA /* cafelun */;
+			targetProxy = E6F4D94F2839D9B5007F39AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E6F4D9372839D9B3007F39AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6F4D9382839D9B3007F39AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E6F4D93C2839D9B4007F39AA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E6F4D93D2839D9B4007F39AA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E6F4D9562839D9B5007F39AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E6F4D9572839D9B5007F39AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E6F4D9592839D9B5007F39AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cafelun/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E6F4D95A2839D9B5007F39AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = cafelun/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelun;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E6F4D95C2839D9B5007F39AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cafelun.app/cafelun";
+			};
+			name = Debug;
+		};
+		E6F4D95D2839D9B5007F39AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelunTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cafelun.app/cafelun";
+			};
+			name = Release;
+		};
+		E6F4D95F2839D9B5007F39AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cafelun;
+			};
+			name = Debug;
+		};
+		E6F4D9602839D9B5007F39AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 24JCXR6VGM;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.suzu.cafelunUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = cafelun;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E6F4D9292839D9B3007F39AA /* Build configuration list for PBXProject "cafelun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F4D9562839D9B5007F39AA /* Debug */,
+				E6F4D9572839D9B5007F39AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F4D9582839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F4D9592839D9B5007F39AA /* Debug */,
+				E6F4D95A2839D9B5007F39AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F4D95B2839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelunTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F4D95C2839D9B5007F39AA /* Debug */,
+				E6F4D95D2839D9B5007F39AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E6F4D95E2839D9B5007F39AA /* Build configuration list for PBXNativeTarget "cafelunUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E6F4D95F2839D9B5007F39AA /* Debug */,
+				E6F4D9602839D9B5007F39AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E6728C3B283F5081000443AD /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E6728C3C283F5081000443AD /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6728C3B283F5081000443AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		E6728C3E283F5081000443AD /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E6728C3B283F5081000443AD /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = E6F4D9262839D9B3007F39AA /* Project object */;
+}
