@@ -32,7 +32,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         present(imagePickerController, animated: true)
     }
     
-    // Viewの初期設定を行うメソッド
+    // Viewの初期設定
     func setUpViews() {
         imageButton.layer.cornerRadius = 8
         imageButton.imageView?.contentMode = .scaleAspectFill
@@ -69,12 +69,13 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
 //        photoImageView.image = info[.originalImage]as?UIImage
 //    }
     
+    //バツボタンを押したら
     @IBAction func backBtnAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-    // ツイートボタンを押したときのアクション
-    @IBAction func didTapTweetButton() {
+    // 保存ボタンを押したら
+    @IBAction func didTapSubmitButton() {
         guard let _ = storeNameTextFeild.text else { return }
         
         saveSubmit()
@@ -86,27 +87,29 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         guard let storeNameText = storeNameTextFeild.text else { return }
 
         let submit = Submit()
-        submit.storeNameText = storeNameText// ツイートのテキストをセット
+        submit.storeNameText = storeNameText
         
-        // 画像がボタンにセットされてたら画像も保存
-        if let tweetImage = imageButton.backgroundImage(for: .normal){
-            let imageURLStr = saveImage(image: tweetImage) //画像を保存
+        // もし画像がボタンにセットされてたら
+        if let Image = imageButton.backgroundImage(for: .normal){
+            //画像を保存
+            let imageURLStr = saveImage(image: Image)
             submit.imageFileName = imageURLStr
         }
         
         try! realm.write({
-            realm.add(submit) // レコードを追加
+            realm.add(submit)
         })
     }
     
-    // 画像を保存するメソッド
+    // 画像を保存
     func saveImage(image: UIImage) -> String? {
         guard let imageData = image.jpegData(compressionQuality: 1.0) else { return nil }
         
         do {
-            let fileName = UUID().uuidString + ".jpeg" // ファイル名を決定(UUIDは、ユニークなID)
-            let imageURL = getImageURL(fileName: fileName) // 保存先のURLをゲット
-            try imageData.write(to: imageURL) // imageURLに画像を書き込む
+            let fileName = UUID().uuidString + ".jpeg"
+            // 保存先のURLをゲット
+            let imageURL = getImageURL(fileName: fileName)
+            try imageData.write(to: imageURL)
             return fileName
         } catch {
             print("Failed to save the image:", error)
@@ -114,13 +117,13 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         }
     }
     
-    // URLを取得するメソッド
+    // URLを取得
     func getImageURL(fileName: String) -> URL {
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return docDir.appendingPathComponent(fileName)
     }
     
-    // 画像選択ボタンを押したときのアクション
+    // 画像選択ボタンを押したときに実行
     @IBAction func didTapImageButton() {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
@@ -131,10 +134,10 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     
 //extension AddInfoViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
-    // ライブラリから戻ってきた時に呼ばれるデリゲートメソッド
+    // ライブラリから戻ってきたとき
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return picker.dismiss(animated: true) }
-        // imageButtonのバックグラウンドに選択した画像をセット
+        // imageButtonのバックグラウンドに画像を挿入
         imageButton.setBackgroundImage(pickedImage, for: .normal)
         picker.dismiss(animated: true)
 }
