@@ -139,10 +139,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     // ライブラリから戻ったときに実行
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return picker.dismiss(animated: true) }
-        // imageButtonのバックグラウンドに画像を挿入
-        //        self.dismiss(animated: true, completion: nil)
-        //        photoImageView.image = info[.originalImage]as?UIImage
-        imageButton.setBackgroundImage(pickedImage, for: .normal)
-        picker.dismiss(animated: true)
+            imageButton.setBackgroundImage(pickedImage, for: .normal)
+            picker.dismiss(animated: true)
     }
 }

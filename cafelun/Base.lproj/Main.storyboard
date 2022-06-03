@@ -77,6 +77,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="went.PNG" id="L6a-U3-0K2"/>
                     <connections>
+                        <outlet property="addButton" destination="3Re-Vb-Ufc" id="hsW-Rh-dcM"/>
                         <outlet property="collectionView" destination="dPG-zs-wdv" id="3b7-8S-zu0"/>
                     </connections>
                 </viewController>
@@ -142,8 +143,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="want.PNG" id="nZC-1h-pm2"/>
                     <connections>
+                        <outlet property="addButton" destination="ZIa-E4-iwj" id="kFf-Ii-5wr"/>
                         <outlet property="collectionView" destination="0qg-iE-Vwb" id="9jK-vz-2Gf"/>
-                        <outlet property="tweetButton" destination="ZIa-E4-iwj" id="b7j-kT-y8e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OPP-DK-Z6c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

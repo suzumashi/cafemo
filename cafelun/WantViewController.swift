@@ -11,7 +11,7 @@ import RealmSwift
 class WantViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
 
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var tweetButton: UIButton!
+    @IBOutlet var addButton: UIButton!
 
     let realm = try! Realm()
 
@@ -34,8 +34,10 @@ class WantViewController: UIViewController, UICollectionViewDataSource, UICollec
 
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
-        collection = Array(realm.objects(Item.self)).reversed()  // Realm DBから保存されてるツイートを全取得
-        collectionView.reloadData() // テーブルビューをリロード
+        //保存されている配列を全て取り出す
+        collection = Array(realm.objects(Item.self)).reversed()
+        //画面をリロードして最新に
+        collectionView.reloadData() 
     }
 
 
