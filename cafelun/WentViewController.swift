@@ -5,6 +5,7 @@
 //  Created by 鈴木ましろ on 2022/05/22.
 //
 
+
 import UIKit
 
 class WentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -25,7 +26,7 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) // 表示するセルを登録(先程命名した"Cell")
-        cell.backgroundColor = .red  // セルの色
+        cell.backgroundColor = .black  // セルの色
         return cell
     }
  
@@ -36,5 +37,3 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
  
 }
-
-

@@ -12,16 +12,13 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let config = Realm.Configuration(
-            schemaVersion: 1,
-            migrationBlock: nil,
-            deleteRealmIfMigrationNeeded: true)
+        let config = Realm.Configuration(schemaVersion: 1,
+                                         migrationBlock: nil,
+                                         deleteRealmIfMigrationNeeded: true)
         Realm.Configuration.defaultConfiguration = config
-        
         return true
     }
 
