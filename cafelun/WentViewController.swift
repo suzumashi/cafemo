@@ -20,7 +20,7 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //関数を設定する(自分自身をセット)
+        //関数を設定する(自分自身をセットする)
         collectionView.delegate = self
         collectionView.dataSource = self
         
