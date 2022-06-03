@@ -20,6 +20,10 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //関数を設定する(自分自身をセット)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         getItemData()
@@ -78,7 +82,7 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = collection[indexPath.row]
-        return item.imageFileName == nil ? 100 : 100
+        return item.imageFileName == nil ? 1 : 1
         
     }
 }
