@@ -22,7 +22,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var memoTextFeild: UITextField!
     
     let realm = try! Realm()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
@@ -37,37 +37,37 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         imageButton.layer.cornerRadius = 8
         imageButton.imageView?.contentMode = .scaleAspectFill
     }
-        
-//        presenPickerController(sourceType: .photoLibrary)
-//
-//        func presenPickerController(sourceType: UIImagePickerController.SourceType){
-//            if UIImagePickerController.isSourceTypeAvailable(sourceType){
-//                let picker = UIImagePickerController()
-//                picker.sourceType = sourceType
-//                picker.delegate = self
-//                self.present(picker,animated: true, completion: nil)
-//            }
-//        }
-        // Do any additional setup after loading the view.
-        
-//    }
-
-//    @IBAction func onTappedAlbumButton() {
-//        presenPickerController(sourceType: .photoLibrary)
-//        func presenPickerController(sourceType: UIImagePickerController.SourceType){
-//            if UIImagePickerController.isSourceTypeAvailable(sourceType){
-//                let picker = UIImagePickerController()
-//                picker.sourceType = sourceType
-//                picker.delegate = self
-//                self.present(picker,animated: true, completion: nil)
-//                }
-//            }
-//        }
-//
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey:Any]) {
-//        self.dismiss(animated: true, completion: nil)
-//        photoImageView.image = info[.originalImage]as?UIImage
-//    }
+    
+    //        presenPickerController(sourceType: .photoLibrary)
+    //
+    //        func presenPickerController(sourceType: UIImagePickerController.SourceType){
+    //            if UIImagePickerController.isSourceTypeAvailable(sourceType){
+    //                let picker = UIImagePickerController()
+    //                picker.sourceType = sourceType
+    //                picker.delegate = self
+    //                self.present(picker,animated: true, completion: nil)
+    //            }
+    //        }
+    // Do any additional setup after loading the view.
+    
+    //    }
+    
+    //    @IBAction func onTappedAlbumButton() {
+    //        presenPickerController(sourceType: .photoLibrary)
+    //        func presenPickerController(sourceType: UIImagePickerController.SourceType){
+    //            if UIImagePickerController.isSourceTypeAvailable(sourceType){
+    //                let picker = UIImagePickerController()
+    //                picker.sourceType = sourceType
+    //                picker.delegate = self
+    //                self.present(picker,animated: true, completion: nil)
+    //                }
+    //            }
+    //        }
+    //
+    //    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey:Any]) {
+    //        self.dismiss(animated: true, completion: nil)
+    //        photoImageView.image = info[.originalImage]as?UIImage
+    //    }
     
     //バツボタンを押したら
     @IBAction func backBtnAction(_ sender: Any) {
@@ -85,7 +85,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     // ツイートを保存するメソッド
     func saveSubmit() {
         guard let storeNameText = storeNameTextFeild.text else { return }
-
+        
         let item = Item()
         item.storeNameText = storeNameText
         
@@ -111,7 +111,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
             let imageURL = getImageURL(fileName: fileName)
             try imageData.write(to: imageURL)
             
-                print("Failed to save the image:")
+            print("Failed to save the image:")
             return fileName
         } catch {
             print("Failed to save the image:", error)
@@ -132,14 +132,14 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         present(imagePickerController, animated: true)
     }
     
-//}
+    //}
     
-//extension AddInfoViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    //extension AddInfoViewController: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     // ライブラリから戻ったときに実行
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return picker.dismiss(animated: true) }
-            imageButton.setBackgroundImage(pickedImage, for: .normal)
-            picker.dismiss(animated: true)
+        imageButton.setBackgroundImage(pickedImage, for: .normal)
+        picker.dismiss(animated: true)
     }
 }
