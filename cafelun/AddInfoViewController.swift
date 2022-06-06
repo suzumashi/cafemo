@@ -141,7 +141,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         item.placeText = placeText
         item.urlText = urlText
         item.memoText = memoText
-        item.hasMirror = hasMirror
+        item.hasMirror
         item.hasWifi
         item.hasOutlet
         
