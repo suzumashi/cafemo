@@ -31,8 +31,8 @@
 		E6F4D9492839D9B5007F39AA /* cafelunTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9482839D9B5007F39AA /* cafelunTests.swift */; };
 		E6F4D9532839D9B5007F39AA /* cafelunUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9522839D9B5007F39AA /* cafelunUITests.swift */; };
 		E6F4D9552839D9B5007F39AA /* cafelunUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9542839D9B5007F39AA /* cafelunUITestsLaunchTests.swift */; };
-		E6F4D96E2839E451007F39AA /* WentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96D2839E451007F39AA /* WentViewController.swift */; };
-		E6F4D9702839E473007F39AA /* WantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96F2839E473007F39AA /* WantViewController.swift */; };
+		E6F4D96E2839E451007F39AA /* VisitCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96D2839E451007F39AA /* VisitCollectionViewController.swift */; };
+		E6F4D9702839E473007F39AA /* WantCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D96F2839E473007F39AA /* WantCollectionViewController.swift */; };
 		E6F4D976283A2E06007F39AA /* plusButton.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E6F4D975283A2E06007F39AA /* plusButton.PNG */; };
 /* End PBXBuildFile section */
 
@@ -80,8 +80,8 @@
 		E6F4D94E2839D9B5007F39AA /* cafelunUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cafelunUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4D9522839D9B5007F39AA /* cafelunUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafelunUITests.swift; sourceTree = "<group>"; };
 		E6F4D9542839D9B5007F39AA /* cafelunUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafelunUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E6F4D96D2839E451007F39AA /* WentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WentViewController.swift; path = cafelun/WentViewController.swift; sourceTree = SOURCE_ROOT; };
-		E6F4D96F2839E473007F39AA /* WantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantViewController.swift; sourceTree = "<group>"; };
+		E6F4D96D2839E451007F39AA /* VisitCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = VisitCollectionViewController.swift; path = cafelun/VisitCollectionViewController.swift; sourceTree = SOURCE_ROOT; };
+		E6F4D96F2839E473007F39AA /* WantCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantCollectionViewController.swift; sourceTree = "<group>"; };
 		E6F4D975283A2E06007F39AA /* plusButton.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusButton.PNG; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,8 +177,8 @@
 				E6F4D9312839D9B3007F39AA /* AppDelegate.swift */,
 				E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */,
 				E6F4D9352839D9B3007F39AA /* ViewController.swift */,
-				E6F4D96D2839E451007F39AA /* WentViewController.swift */,
-				E6F4D96F2839E473007F39AA /* WantViewController.swift */,
+				E6F4D96D2839E451007F39AA /* VisitCollectionViewController.swift */,
+				E6F4D96F2839E473007F39AA /* WantCollectionViewController.swift */,
 				E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */,
 				E6728C5428406724000443AD /* Models */,
 				E6F4D9372839D9B3007F39AA /* Main.storyboard */,
@@ -377,9 +377,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6F4D96E2839E451007F39AA /* WentViewController.swift in Sources */,
+				E6F4D96E2839E451007F39AA /* VisitCollectionViewController.swift in Sources */,
 				E6F4D9362839D9B3007F39AA /* ViewController.swift in Sources */,
-				E6F4D9702839E473007F39AA /* WantViewController.swift in Sources */,
+				E6F4D9702839E473007F39AA /* WantCollectionViewController.swift in Sources */,
 				E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */,
 				E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */,
 				E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */,

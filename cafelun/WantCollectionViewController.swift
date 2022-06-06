@@ -1,5 +1,5 @@
 //
-//  WentViewController.swift
+//  WantViewController.swift
 //  cafelun
 //
 //  Created by 鈴木ましろ on 2022/05/22.
@@ -8,10 +8,10 @@
 import UIKit
 import RealmSwift
 
-class WentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+class WantCollectionViewController: UIViewController{
     
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var AddButton: UIButton!
+    @IBOutlet var addButton: UIButton!
     
     let realm = try! Realm()
     
@@ -27,7 +27,10 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         getItemData()
+        
+        print("viewdid done")
     }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -35,22 +38,33 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     
+    
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
         //保存されている配列を全て取り出す
         collection = Array(realm.objects(Item.self)).reversed()
+        print("realm")
         //画面をリロードして最新に
         collectionView.reloadData()
+        print("reloadData")
     }
+
+
+}
+
+extension WantCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{
     
+    func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collection.count
+        return collection.count 
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        guard let itemImageView = cell.viewWithTag(4) as? UIImageView else { return cell }
+        guard let itemImageView = cell.viewWithTag(4) as? UIImageView else {
+            return cell
+        }
         
         let item = collection[indexPath.row]
         
@@ -61,6 +75,7 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
                 // pathに保存されている画像を取得
                 if let imageData = UIImage(contentsOfFile: path) {
                     itemImageView.image = imageData
+                    print("\(imageData)")
                     
                 } else {
                     print("Failed to load the image. path")
@@ -78,43 +93,16 @@ class WentViewController: UIViewController, UICollectionViewDataSource, UICollec
         return docDir.appendingPathComponent(fileName)
     }
     
-    
+}
+extension WantCollectionViewController: UICollectionViewDelegateFlowLayout{
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+
         let item = collection[indexPath.row]
-        return item.imageFileName == nil ? 1 : 1
-        
+        return item.imageFileName == nil ? 10 : 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+         return 2 // 行間
     }
 }
-
-//import UIKit
-//
-//class WentViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
-//
-//    @IBOutlet var collectionView: UICollectionView!
-//
-//    override func viewDidLoad() {
-//        super.viewDidLoad()
-//
-//        // レイアウトを調整
-//        let layout = UICollectionViewFlowLayout()
-//        collectionView.collectionViewLayout = layout
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return 18 // 表示するセルの数
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) // 表示するセルを登録(先程命名した"Cell")
-//        cell.backgroundColor = .black  // セルの色
-//        return cell
-//    }
-//
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        let horizontalSpace : CGFloat = 10
-//        let cellSize : CGFloat = self.view.bounds.width / 3 - horizontalSpace
-//        return CGSize(width: cellSize, height: cellSize)
-//    }
-//
-//}

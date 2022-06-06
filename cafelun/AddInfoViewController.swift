@@ -15,11 +15,15 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var imageButton: UIButton!
     @IBOutlet var placeTextFeild: UITextField!
     @IBOutlet var urlTextFeild: UITextField!
-    @IBOutlet var hasWent: UISegmentedControl!
-    @IBOutlet var hasMirror: UISwitch!
-    @IBOutlet var hasWifi: UISwitch!
-    @IBOutlet var hasOutlet: UISwitch!
+    @IBOutlet var hasWentSegmentedControl: UISegmentedControl!
+    @IBOutlet var hasMirrorSwitch: UISwitch!
+    @IBOutlet var hasWifiSwitch: UISwitch!
+    @IBOutlet var hasOutletSwitch: UISwitch!
     @IBOutlet var memoTextFeild: UITextField!
+    
+    var hasMirror: Bool = true
+    var hasWifi: Bool = true
+    var hasOutlet: Bool = true
     
     let realm = try! Realm()
     
@@ -77,17 +81,69 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     // 保存ボタンを押したら
     @IBAction func didTapSubmitButton() {
         guard let _ = storeNameTextFeild.text else { return }
+        guard let _ = placeTextFeild.text else { return }
+        guard let _ = urlTextFeild.text else { return }
+        guard let _ = memoTextFeild.text else { return }
         
+        saveSubmit()
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func hasMirrorButton(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasMirror = true
+            print("hasMirrorButton true")
+            //ボタンがオフの時の処理
+        } else {
+            hasMirror = false
+            print("hasMirrorButton false")
+        }
+        saveSubmit()
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func hasWifiButton(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasWifi = true
+            print("hasWifiButton true")
+            //ボタンがオフの時の処理
+        } else {
+            hasWifi = false
+            print("hasWifiButton false")
+        }
+        saveSubmit()
+        self.dismiss(animated: true)
+    }
+    
+    @IBAction func hasOutletButton(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasOutlet = true
+            print("hasOutletButton true")
+            //ボタンがオフの時の処理
+        } else {
+            hasOutlet = false
+            print("hasOutletButton false")
+        }
         saveSubmit()
         self.dismiss(animated: true)
     }
     
     // ツイートを保存するメソッド
     func saveSubmit() {
+        //オプショナル型(アンラップ)
         guard let storeNameText = storeNameTextFeild.text else { return }
+        guard let placeText = placeTextFeild.text else { return }
+        guard let urlText = urlTextFeild.text else { return }
+        guard let memoText = memoTextFeild.text else { return }
         
         let item = Item()
         item.storeNameText = storeNameText
+        item.placeText = placeText
+        item.urlText = urlText
+        item.memoText = memoText
+        item.hasMirror = hasMirror
+        item.hasWifi
+        item.hasOutlet
         
         // もし画像がボタンにセットされてたら
         if let Image = imageButton.backgroundImage(for: .normal){
@@ -142,4 +198,6 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         imageButton.setBackgroundImage(pickedImage, for: .normal)
         picker.dismiss(animated: true)
     }
+    
+    
 }

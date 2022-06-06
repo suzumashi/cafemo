@@ -1,5 +1,5 @@
 //
-//  WantViewController.swift
+//  WentViewController.swift
 //  cafelun
 //
 //  Created by 鈴木ましろ on 2022/05/22.
@@ -8,10 +8,10 @@
 import UIKit
 import RealmSwift
 
-class WantViewController: UIViewController{
+class VisitCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var addButton: UIButton!
+    @IBOutlet var AddButton: UIButton!
     
     let realm = try! Realm()
     
@@ -26,10 +26,8 @@ class WantViewController: UIViewController{
         
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
-        print("あああ viewdid")
         getItemData()
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,33 +35,22 @@ class WantViewController: UIViewController{
     }
     
     
-    
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
-        print("あああ get")
         //保存されている配列を全て取り出す
         collection = Array(realm.objects(Item.self)).reversed()
-        print("realm")
         //画面をリロードして最新に
         collectionView.reloadData()
-        print("reloadData")
     }
     
-
-}
-extension WantViewController: UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collection.count 
+        collection.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-        guard let itemImageView = cell.viewWithTag(4) as? UIImageView else {
-            return cell
-        }
+        guard let itemImageView = cell.viewWithTag(4) as? UIImageView else { return cell }
         
         let item = collection[indexPath.row]
         
@@ -74,7 +61,6 @@ extension WantViewController: UICollectionViewDataSource, UICollectionViewDelega
                 // pathに保存されている画像を取得
                 if let imageData = UIImage(contentsOfFile: path) {
                     itemImageView.image = imageData
-                    print("\(imageData)")
                     
                 } else {
                     print("Failed to load the image. path")
@@ -92,14 +78,14 @@ extension WantViewController: UICollectionViewDataSource, UICollectionViewDelega
         return docDir.appendingPathComponent(fileName)
     }
     
-}
-extension WantViewController: UICollectionViewDelegateFlowLayout{
+    
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = collection[indexPath.row]
         return item.imageFileName == nil ? 10 : 10
+    }
     
-
-        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2 // 行間
     }
 }
