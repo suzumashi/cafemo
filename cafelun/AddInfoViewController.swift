@@ -31,9 +31,9 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         super.viewDidLoad()
         setUpViews()
         
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        present(imagePickerController, animated: true)
+//        let imagePickerController = UIImagePickerController()
+//        imagePickerController.delegate = self
+//        present(imagePickerController, animated: true)
     }
     
     // Viewの初期設定
@@ -78,6 +78,39 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func hasMirrorSwitch(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasMirror = true
+            print("hasMirror true")
+            //ボタンがオフの時の処理
+        } else {
+            hasMirror = false
+            print("hasMirror false")
+        }
+    }
+    
+    @IBAction func hasWifiSwitch(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasWifi = true
+            print("hasWifi true")
+            //ボタンがオフの時の処理
+        } else {
+            hasWifi = false
+            print("hasWifi false")
+        }
+    }
+    
+    @IBAction func hasOutletSwitch(_ sender: UISwitch) {
+        if sender.isOn == true {
+            hasOutlet = true
+            print("hasOutlet true")
+            //ボタンがオフの時の処理
+        } else {
+            hasOutlet = false
+            print("hasOutlet false")
+        }
+    }
+    
     // 保存ボタンを押したら
     @IBAction func didTapSubmitButton() {
         guard let _ = storeNameTextFeild.text else { return }
@@ -85,45 +118,6 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         guard let _ = urlTextFeild.text else { return }
         guard let _ = memoTextFeild.text else { return }
         
-        saveSubmit()
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func hasMirrorButton(_ sender: UISwitch) {
-        if sender.isOn == true {
-            hasMirror = true
-            print("hasMirrorButton true")
-            //ボタンがオフの時の処理
-        } else {
-            hasMirror = false
-            print("hasMirrorButton false")
-        }
-        saveSubmit()
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func hasWifiButton(_ sender: UISwitch) {
-        if sender.isOn == true {
-            hasWifi = true
-            print("hasWifiButton true")
-            //ボタンがオフの時の処理
-        } else {
-            hasWifi = false
-            print("hasWifiButton false")
-        }
-        saveSubmit()
-        self.dismiss(animated: true)
-    }
-    
-    @IBAction func hasOutletButton(_ sender: UISwitch) {
-        if sender.isOn == true {
-            hasOutlet = true
-            print("hasOutletButton true")
-            //ボタンがオフの時の処理
-        } else {
-            hasOutlet = false
-            print("hasOutletButton false")
-        }
         saveSubmit()
         self.dismiss(animated: true)
     }
@@ -141,9 +135,9 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         item.placeText = placeText
         item.urlText = urlText
         item.memoText = memoText
-        item.hasMirror
-        item.hasWifi
-        item.hasOutlet
+//        item.hasMirror
+//        item.hasWifi
+//        item.hasOutlet
         
         // もし画像がボタンにセットされてたら
         if let Image = imageButton.backgroundImage(for: .normal){

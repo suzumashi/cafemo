@@ -298,21 +298,21 @@
                                 <rect key="frame" x="345" y="593" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="hasMirrorButton:" destination="oSX-05-1dP" eventType="touchUpOutside" id="EkQ-LH-1zs"/>
+                                    <action selector="hasMirrorSwitch:" destination="oSX-05-1dP" eventType="valueChanged" id="lQI-LY-z3K"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W00-pa-b59">
                                 <rect key="frame" x="345" y="638" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="hasWifiButton:" destination="oSX-05-1dP" eventType="touchUpOutside" id="Mla-iH-Xl4"/>
+                                    <action selector="hasOutletSwitch:" destination="oSX-05-1dP" eventType="touchUpOutside" id="gOv-fm-f3q"/>
                                 </connections>
                             </switch>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-An-hMn">
                                 <rect key="frame" x="345" y="681" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="hasOutletButton:" destination="oSX-05-1dP" eventType="touchUpOutside" id="IiK-Kb-UbU"/>
+                                    <action selector="hasWifiSwitch:" destination="oSX-05-1dP" eventType="touchUpInside" id="FA5-7Z-dr6"/>
                                 </connections>
                             </switch>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="2Qn-Pp-fQT">

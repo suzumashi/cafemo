@@ -21,8 +21,14 @@ class Item: Object {
     @objc dynamic var placeText: String = ""
     @objc dynamic var urlText: String = ""
     
-    @objc dynamic var hasMirror: String = ""
-    @objc dynamic var hasWifi: String = ""
-    @objc dynamic var hasOutlet: String = ""
+    @objc dynamic var hasMirrorON = true
+    @objc dynamic var hasMirrorOff = false
+    
+    @objc dynamic var hasWifiOn = true
+    @objc dynamic var hasWifiOff = false
+    
+    @objc dynamic var hasOutletOn = true
+    @objc dynamic var hasOutletOff = false
+    
     @objc dynamic var memoText: String = ""
 }
