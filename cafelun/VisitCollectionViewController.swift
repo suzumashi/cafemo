@@ -17,12 +17,18 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     var collection = [Item]()
     
+    var select_photos:[String] = []
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //関数を設定する(自分自身をセットする)
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        // Do any additional setup after loading the view.
         
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
@@ -42,7 +48,6 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         //画面をリロードして最新に
         collectionView.reloadData()
     }
-    
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collection.count
@@ -78,7 +83,6 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         return docDir.appendingPathComponent(fileName)
     }
     
-    
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let item = collection[indexPath.row]
@@ -88,4 +92,5 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2 // 行間
     }
+    
 }

@@ -20,10 +20,18 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var hasWifiSwitch: UISwitch!
     @IBOutlet var hasOutletSwitch: UISwitch!
     @IBOutlet var memoTextFeild: UITextField!
+    @IBOutlet var testLabel: UILabel!
+    
+//    @IBOutlet weak var textField: UITextField!
+    
+    var hasWent: Bool = true
     
     var hasMirror: Bool = true
     var hasWifi: Bool = true
     var hasOutlet: Bool = true
+
+    
+    @IBOutlet weak var timeTextField: UITextField!
     
     let realm = try! Realm()
     
@@ -31,11 +39,44 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         super.viewDidLoad()
         setUpViews()
         
+        self.placeTextFeild.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        self.view.addGestureRecognizer(tapGesture)
+        
 //        let imagePickerController = UIImagePickerController()
 //        imagePickerController.delegate = self
 //        present(imagePickerController, animated: true)
     }
     
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            } else {
+                let suggestionHeight = self.view.frame.origin.y + keyboardSize.height
+                self.view.frame.origin.y -= suggestionHeight
+            }
+        }
+    }
+    
+    @objc func keyboardWillHide() {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+ 
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+
     // Viewの初期設定
     func setUpViews() {
         imageButton.layer.cornerRadius = 8
@@ -73,10 +114,28 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     //        photoImageView.image = info[.originalImage]as?UIImage
     //    }
     
+
+    
     //バツボタンを押したら
     @IBAction func backBtnAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+
+    @IBAction func hasWentSegmented(_ sender: UISegmentedControl) {
+          switch sender.selectedSegmentIndex {
+          case 0:
+              hasWent = true
+              print("hasWentSegmented 行きたい")
+              break
+          case 1:
+              hasWent = false
+              print("hasWentSegmented 行った")
+              break
+          default:
+              print("Error")
+              break
+          }
+      }
     
     @IBAction func hasMirrorSwitch(_ sender: UISwitch) {
         if sender.isOn == true {
@@ -122,6 +181,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         self.dismiss(animated: true)
     }
     
+    
     // ツイートを保存するメソッド
     func saveSubmit() {
         //オプショナル型(アンラップ)
@@ -135,9 +195,10 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         item.placeText = placeText
         item.urlText = urlText
         item.memoText = memoText
-//        item.hasMirror
-//        item.hasWifi
-//        item.hasOutlet
+        item.hasWent = hasWent
+        item.hasMirror = hasMirror
+        item.hasWifi = hasWifi
+        item.hasOutlet = hasOutlet
         
         // もし画像がボタンにセットされてたら
         if let Image = imageButton.backgroundImage(for: .normal){
@@ -193,5 +254,13 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         picker.dismiss(animated: true)
     }
     
+}
+
+extension AddInfoViewController: UITextFieldDelegate {
+    
+    func placeTextFeild(_ placeTextFeild: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
     
 }
