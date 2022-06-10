@@ -48,8 +48,8 @@ class WantCollectionViewController: UIViewController{
         collectionView.reloadData()
         print("reloadData")
     }
-
-
+    
+    
 }
 
 extension WantCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{
@@ -68,21 +68,25 @@ extension WantCollectionViewController: UICollectionViewDataSource, UICollection
         
         let item = collection[indexPath.row]
         
-        if let imageFileName = item.imageFileName {
-            // 画像のパスを取得
-            let path = getImageURL(fileName: imageFileName).path
-            if FileManager.default.fileExists(atPath: path) {
-                // pathに保存されている画像を取得
-                if let imageData = UIImage(contentsOfFile: path) {
-                    itemImageView.image = imageData
-                    print("\(imageData)")
-                    
+        if item.hasWent == true {
+            if let imageFileName = item.imageFileName {
+                // 画像のパスを取得
+                let path = getImageURL(fileName: imageFileName).path
+                if FileManager.default.fileExists(atPath: path) {
+                    // pathに保存されている画像を取得
+                    if let imageData = UIImage(contentsOfFile: path) {
+                        itemImageView.image = imageData
+                        print("\(imageData)")
+                        
+                    } else {
+                        print("Failed to load the image. path")
+                    }
                 } else {
-                    print("Failed to load the image. path")
+                    print("Image file not found. path")
                 }
-            } else {
-                print("Image file not found. path")
             }
+        } else {
+            print("WantCollection")
         }
         return cell
     }
@@ -97,12 +101,12 @@ extension WantCollectionViewController: UICollectionViewDataSource, UICollection
 extension WantCollectionViewController: UICollectionViewDelegateFlowLayout{
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-
+        
         let item = collection[indexPath.row]
         return item.imageFileName == nil ? 10 : 10
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-         return 2 // 行間
+        return 2 // 行間
     }
 }

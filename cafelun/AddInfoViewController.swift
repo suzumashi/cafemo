@@ -20,18 +20,11 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var hasWifiSwitch: UISwitch!
     @IBOutlet var hasOutletSwitch: UISwitch!
     @IBOutlet var memoTextFeild: UITextField!
-    @IBOutlet var testLabel: UILabel!
-    
-//    @IBOutlet weak var textField: UITextField!
     
     var hasWent: Bool = true
-    
     var hasMirror: Bool = true
     var hasWifi: Bool = true
     var hasOutlet: Bool = true
-
-    
-    @IBOutlet weak var timeTextField: UITextField!
     
     let realm = try! Realm()
     
@@ -45,9 +38,9 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
         
-//        let imagePickerController = UIImagePickerController()
-//        imagePickerController.delegate = self
-//        present(imagePickerController, animated: true)
+        //        let imagePickerController = UIImagePickerController()
+        //        imagePickerController.delegate = self
+        //        present(imagePickerController, animated: true)
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -66,7 +59,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
             self.view.frame.origin.y = 0
         }
     }
- 
+    
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
@@ -76,7 +69,7 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-
+    
     // Viewの初期設定
     func setUpViews() {
         imageButton.layer.cornerRadius = 8
@@ -114,28 +107,28 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     //        photoImageView.image = info[.originalImage]as?UIImage
     //    }
     
-
+    
     
     //バツボタンを押したら
     @IBAction func backBtnAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
-
+    
     @IBAction func hasWentSegmented(_ sender: UISegmentedControl) {
-          switch sender.selectedSegmentIndex {
-          case 0:
-              hasWent = true
-              print("hasWentSegmented 行きたい")
-              break
-          case 1:
-              hasWent = false
-              print("hasWentSegmented 行った")
-              break
-          default:
-              print("Error")
-              break
-          }
-      }
+        switch sender.selectedSegmentIndex {
+        case 0:
+            hasWent = true
+            print("hasWentSegmented 行きたい")
+            break
+        case 1:
+            hasWent = false
+            print("hasWentSegmented 行った")
+            break
+        default:
+            print("Error")
+            break
+        }
+    }
     
     @IBAction func hasMirrorSwitch(_ sender: UISwitch) {
         if sender.isOn == true {

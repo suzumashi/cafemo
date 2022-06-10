@@ -16,11 +16,8 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     let realm = try! Realm()
     
     var collection = [Item]()
-    
-    var select_photos:[String] = []
-    
 
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,19 +25,17 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         collectionView.delegate = self
         collectionView.dataSource = self
 
-        // Do any additional setup after loading the view.
-        
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         getItemData()
+        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getItemData()
     }
-    
-    
+
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
         //保存されている配列を全て取り出す
@@ -59,20 +54,24 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         
         let item = collection[indexPath.row]
         
-        if let imageFileName = item.imageFileName {
-            // 画像のパスを取得
-            let path = getImageURL(fileName: imageFileName).path
-            if FileManager.default.fileExists(atPath: path) {
-                // pathに保存されている画像を取得
-                if let imageData = UIImage(contentsOfFile: path) {
-                    itemImageView.image = imageData
-                    
+        if item.hasWent == false {
+            if let imageFileName = item.imageFileName {
+                // 画像のパスを取得
+                let path = getImageURL(fileName: imageFileName).path
+                if FileManager.default.fileExists(atPath: path) {
+                    // pathに保存されている画像を取得
+                    if let imageData = UIImage(contentsOfFile: path) {
+                        itemImageView.image = imageData
+                        
+                    } else {
+                        print("Failed to load the image. path")
+                    }
                 } else {
-                    print("Failed to load the image. path")
+                    print("Image file not found. path")
                 }
-            } else {
-                print("Image file not found. path")
             }
+        } else {
+            print("VisitCollection")
         }
         return cell
     }
