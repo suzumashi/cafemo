@@ -8,12 +8,14 @@
 import UIKit
 import RealmSwift
 
-class WantCollectionViewController: UIViewController{
+class WantCollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var addButton: UIButton!
     
     let realm = try! Realm()
+    
+    var indexNum = 0
     
     var collection = [Item]()
     
@@ -29,6 +31,12 @@ class WantCollectionViewController: UIViewController{
         getItemData()
         
         print("viewdid done")
+        
+        //長押し時の判定
+        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(onLongPressAction))
+            longPressRecognizer.allowableMovement = 10
+            longPressRecognizer.minimumPressDuration = 1
+            self.collectionView.addGestureRecognizer(longPressRecognizer)
     }
     
     
@@ -37,6 +45,14 @@ class WantCollectionViewController: UIViewController{
         getItemData()
     }
     
+    @objc func onLongPressAction(sender: UILongPressGestureRecognizer) {
+            let point: CGPoint = sender.location(in: self.collectionView)
+            let indexPath = self.collectionView.indexPathForItem(at: point)
+            if let indexPath = indexPath {
+                //何らかの処理
+                print("a")
+            }
+        }
     
     
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
@@ -49,16 +65,6 @@ class WantCollectionViewController: UIViewController{
         print("reloadData")
     }
     
-    
-}
-
-extension WantCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegate{
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return collection.count 
-    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
@@ -91,14 +97,15 @@ extension WantCollectionViewController: UICollectionViewDataSource, UICollection
         return cell
     }
     
+        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            return collection.count
+        }
+    
     // URLを取得するメソッド
     func getImageURL(fileName: String) -> URL {
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
         return docDir.appendingPathComponent(fileName)
     }
-    
-}
-extension WantCollectionViewController: UICollectionViewDelegateFlowLayout{
     // Cellのサイズを設定するデリゲートメソッド
     func collectionView(_ collectionView: UICollectionView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -109,4 +116,19 @@ extension WantCollectionViewController: UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2 // 行間
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cellがタップされた！")
+        collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        indexNum = indexPath.row
+        performSegue(withIdentifier: "WantCollectionViewController", sender: nil)
+        print(indexNum)
+}
+
+override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+    if (segue.identifier == "WantCollectionViewController") {
+        let nextVC: AddInfoViewController = (segue.destination as? AddInfoViewController)!
+        nextVC.num = indexNum
+    }
+}
 }

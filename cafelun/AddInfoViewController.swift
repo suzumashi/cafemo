@@ -21,22 +21,36 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var hasOutletSwitch: UISwitch!
     @IBOutlet var memoTextFeild: UITextField!
     
+    @IBOutlet var imageView: UIImageView!
+    var selectedImg: UIImage!
+    
+    
     var hasWent: Bool = true
     var hasMirror: Bool = true
     var hasWifi: Bool = true
     var hasOutlet: Bool = true
+    
+   
+    var num = Int()
     
     let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpViews()
+        detailView()
+        
+        print(num)
         
         self.placeTextFeild.delegate = self
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         self.view.addGestureRecognizer(tapGesture)
+        
+        imageView.image = selectedImg
+        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
+        imageView.contentMode = UIView.ContentMode.scaleAspectFit
         
         //        let imagePickerController = UIImagePickerController()
         //        imagePickerController.delegate = self
@@ -245,6 +259,12 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         guard let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage else { return picker.dismiss(animated: true) }
         imageButton.setBackgroundImage(pickedImage, for: .normal)
         picker.dismiss(animated: true)
+    }
+    
+    func detailView() {
+        if num != nil {
+            
+        }
     }
     
 }

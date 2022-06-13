@@ -68,7 +68,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plusButton.PNG"/>
                                 <connections>
-                                    <segue destination="oSX-05-1dP" kind="show" id="jWc-9O-iJ5"/>
+                                    <segue destination="oSX-05-1dP" kind="presentation" identifier="VisitCollectionViewController" id="5yf-P3-ymF"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,7 +135,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="plusButton.PNG"/>
                                 <connections>
-                                    <segue destination="oSX-05-1dP" kind="show" id="Pp3-nK-zoO"/>
+                                    <segue destination="oSX-05-1dP" kind="presentation" identifier="WantCollectionViewController" id="1Nf-1s-Hiw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -421,6 +421,7 @@
                         <viewLayoutGuide key="safeArea" id="8OT-2m-IUV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fCv-yF-4X9"/>
                     <connections>
                         <outlet property="hasMirrorSwitch" destination="A1h-Zf-iHa" id="TLu-Y3-g6c"/>
                         <outlet property="hasOutletSwitch" destination="qGe-An-hMn" id="FZF-uf-SJZ"/>
@@ -460,7 +461,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Pp3-nK-zoO"/>
+        <segue reference="1Nf-1s-Hiw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cameraIcon.PNG" width="125" height="125"/>

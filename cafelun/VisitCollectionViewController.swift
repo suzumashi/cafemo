@@ -15,8 +15,11 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     let realm = try! Realm()
     
+    var selectedImage: UIImage?
+    
     var collection = [Item]()
 
+    var indexNum = 0
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,11 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         //データベースファイルのパスを表示
         print(Realm.Configuration.defaultConfiguration.fileURL!)
         getItemData()
+        
+//        imageView.image = selectedImg
+        // 画像のアスペクト比を維持しUIImageViewサイズに収まるように表示
+//        imageView.contentMode = UIView.ContentMode.scaleAspectFit
+        
         // Do any additional setup after loading the view.
     }
     
@@ -35,7 +43,7 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         super.viewWillAppear(animated)
         getItemData()
     }
-
+    
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
         //保存されている配列を全て取り出す
@@ -46,7 +54,7 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         collection.count
-    }
+        }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
@@ -76,6 +84,22 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         return cell
     }
     
+    // Cell が選択された場合
+//    func collectionView(_ collectionView: UICollectionView,
+//                          didSelectItemAt indexPath: IndexPath) {
+//
+//        // [indexPath.row] から画像名を探し、UImage を設定
+//        let item = collection[indexPath.row]
+//        let imageFileName = item.imageFileName
+//        selectedImage = UIImage(named: imageFileName[indexPath.row])
+//        if selectedImage != nil {
+//            // SubViewController へ遷移するために Segue を呼び出す
+//            performSegue(withIdentifier: "AddInfoViewController",sender: nil)
+//        }
+//
+//    }
+
+    
     // URLを取得するメソッド
     func getImageURL(fileName: String) -> URL {
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -91,5 +115,19 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 2 // 行間
     }
+
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            print("Cellがタップされた！")
+            collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+            indexNum = indexPath.row
+            performSegue(withIdentifier: "VisitCollectionViewController", sender: nil)
+            print(indexNum)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "VisitCollectionViewController") {
+            let nextVC: AddInfoViewController = (segue.destination as? AddInfoViewController)!
+            nextVC.num = indexNum
+        }
+    }
 }
