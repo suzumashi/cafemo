@@ -119,24 +119,31 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
         return 2 // 行間
     }
 
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("Cellがタップされた！")
-//        collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-//        indexNum = indexPath.row
-//        
-//        let item = collection[indexPath.row]
-//        itemBox = item.imageFileName
-////        print(itemBox.1)
-//
-//        performSegue(withIdentifier: "WantCollectionViewController", sender: nil)
-//        print(indexNum)
-//    }
-//
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-//        if (segue.identifier == "WantCollectionViewController") {
-//            let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
-//            nextVC.num = indexNum
-//
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("Cellがタップされた！")
+        collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+        indexNum = indexPath.row
+        
+        let item = collection[indexPath.row]
+        itemBox = item.imageFileName
+//        print(itemBox.1)
+
+        performSegue(withIdentifier: "WantCollectionViewController", sender: nil)
+        print(indexNum)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "WantCollectionViewController") {
+            let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
+            nextVC.num = indexNum
+
+        }
+    }
+    
+    // ＋ボタンを押したら追加画面へ遷移
+    @IBAction func didTapButton() {
+        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddInfoViewController") as! AddInfoViewController
+        self.present(secondViewController, animated: true, completion: nil)
+
+    }
 }

@@ -14,8 +14,8 @@
             filePath = "cafelun/AddInfoViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "255"
-            endingLineNumber = "255"
+            startingLineNumber = "245"
+            endingLineNumber = "245"
             landmarkName = "saveImage(image:)"
             landmarkType = "7">
          </BreakpointContent>

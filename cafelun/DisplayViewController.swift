@@ -11,12 +11,12 @@ import RealmSwift
 class DisplayViewController: UIViewController {
     
     var todoItems:Results<Item>!
-
+    
     @IBOutlet var hasWentLabel: UILabel!
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var ImageView: UIImageView!
     @IBOutlet var placeLabel: UILabel!
-
+    
     @IBOutlet var opHText: UILabel!
     @IBOutlet var opMinText: UILabel!
     @IBOutlet var clHText: UILabel!
@@ -31,7 +31,7 @@ class DisplayViewController: UIViewController {
     
     var likeLabelTo: Bool?
     var num = Int()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,7 +43,7 @@ class DisplayViewController: UIViewController {
         
         let object = todoItems[num]
         
-
+        
         
         storeNameLabel.text = object.storeNameText
         if let imageFileName = object.imageFileName {
@@ -67,7 +67,7 @@ class DisplayViewController: UIViewController {
             let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             return docDir.appendingPathComponent(fileName)
         }
-
+        
         opHText.text = object.opHText
         opMinText.text = object.opMinText
         clHText.text = object.clHText
@@ -82,7 +82,7 @@ class DisplayViewController: UIViewController {
         } else {
             hasWentLabel.text = "行きたい"
         }
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -91,15 +91,15 @@ class DisplayViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
