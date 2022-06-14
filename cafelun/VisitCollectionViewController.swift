@@ -126,7 +126,7 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
         if (segue.identifier == "VisitCollectionViewController") {
-            let nextVC: AddInfoViewController = (segue.destination as? AddInfoViewController)!
+            let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
             nextVC.num = indexNum
         }
     }

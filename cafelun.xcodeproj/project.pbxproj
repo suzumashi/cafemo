@@ -21,6 +21,8 @@
 		E6728C522840671B000443AD /* LICENSE_E in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4B2840671B000443AD /* LICENSE_E */; };
 		E6728C532840671B000443AD /* LICENSE_J in Resources */ = {isa = PBXBuildFile; fileRef = E6728C4C2840671B000443AD /* LICENSE_J */; };
 		E6728C56284067C4000443AD /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6728C55284067C4000443AD /* Item.swift */; };
+		E68BB9BD28588021005E438E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BB9BC28588021005E438E /* DisplayViewController.swift */; };
+		E68BB9C12858E06A005E438E /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E68BB9C02858E06A005E438E /* bg.png */; };
 		E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */; };
 		E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9312839D9B3007F39AA /* AppDelegate.swift */; };
 		E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */; };
@@ -66,6 +68,8 @@
 		E6728C4B2840671B000443AD /* LICENSE_E */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_E; sourceTree = "<group>"; };
 		E6728C4C2840671B000443AD /* LICENSE_J */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE_J; sourceTree = "<group>"; };
 		E6728C55284067C4000443AD /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		E68BB9BC28588021005E438E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
+		E68BB9C02858E06A005E438E /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
 		E6F4D92E2839D9B3007F39AA /* cafelun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafelun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4D9312839D9B3007F39AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 				E6F4D96D2839E451007F39AA /* VisitCollectionViewController.swift */,
 				E6F4D96F2839E473007F39AA /* WantCollectionViewController.swift */,
 				E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */,
+				E68BB9BC28588021005E438E /* DisplayViewController.swift */,
 				E6728C5428406724000443AD /* Models */,
 				E6F4D9372839D9B3007F39AA /* Main.storyboard */,
 				E6F4D93A2839D9B4007F39AA /* Assets.xcassets */,
@@ -220,6 +225,7 @@
 			children = (
 				E648BD07283F4096001ACCE4 /* cameraIcon.PNG */,
 				E648BCEF283DE46D001ACCE4 /* saveButton.PNG */,
+				E68BB9C02858E06A005E438E /* bg.png */,
 				E6F4D975283A2E06007F39AA /* plusButton.PNG */,
 				E648BD09283F4350001ACCE4 /* want.PNG */,
 				E648BD0A283F4350001ACCE4 /* went.PNG */,
@@ -340,6 +346,7 @@
 			files = (
 				E6F4D93E2839D9B4007F39AA /* LaunchScreen.storyboard in Resources */,
 				E6728C512840671B000443AD /* README_E in Resources */,
+				E68BB9C12858E06A005E438E /* bg.png in Resources */,
 				E648BCF0283DE46D001ACCE4 /* saveButton.PNG in Resources */,
 				E6F4D976283A2E06007F39AA /* plusButton.PNG in Resources */,
 				E6728C532840671B000443AD /* LICENSE_J in Resources */,
@@ -380,6 +387,7 @@
 				E6F4D96E2839E451007F39AA /* VisitCollectionViewController.swift in Sources */,
 				E6F4D9362839D9B3007F39AA /* ViewController.swift in Sources */,
 				E6F4D9702839E473007F39AA /* WantCollectionViewController.swift in Sources */,
+				E68BB9BD28588021005E438E /* DisplayViewController.swift in Sources */,
 				E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */,
 				E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */,
 				E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */,

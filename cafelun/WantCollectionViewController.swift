@@ -16,6 +16,8 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
     let realm = try! Realm()
     
     var indexNum = 0
+    var id: String?
+    var itemBox: String?
     
     var collection = [Item]()
     
@@ -121,14 +123,20 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
         print("Cellがタップされた！")
         collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         indexNum = indexPath.row
+        
+        let item = collection[indexPath.row]
+        itemBox = item.imageFileName
+//        print(itemBox.1)
+
         performSegue(withIdentifier: "WantCollectionViewController", sender: nil)
         print(indexNum)
 }
 
 override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
     if (segue.identifier == "WantCollectionViewController") {
-        let nextVC: AddInfoViewController = (segue.destination as? AddInfoViewController)!
+        let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
         nextVC.num = indexNum
+
     }
 }
 }
