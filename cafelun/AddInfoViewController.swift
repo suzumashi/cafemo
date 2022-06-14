@@ -15,6 +15,12 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet var imageButton: UIButton!
     @IBOutlet var placeTextFeild: UITextField!
     @IBOutlet var urlTextFeild: UITextField!
+    
+    @IBOutlet var opHTextFeild: UITextField!
+    @IBOutlet var opMinTextFeild: UITextField!
+    @IBOutlet var clHTextFeild: UITextField!
+    @IBOutlet var clMinTextFeild: UITextField!
+    
     @IBOutlet var hasWentSegmentedControl: UISegmentedControl!
     @IBOutlet var hasMirrorSwitch: UISwitch!
     @IBOutlet var hasWifiSwitch: UISwitch!
@@ -23,7 +29,6 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     
     @IBOutlet var imageView: UIImageView!
     var selectedImg: UIImage!
-
     
     var hasWent: Bool = true
     var hasMirror: Bool = true
@@ -176,6 +181,12 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
     @IBAction func didTapSubmitButton() {
         guard let _ = storeNameTextFeild.text else { return }
         guard let _ = placeTextFeild.text else { return }
+        
+        guard let _ = opHTextFeild.text else { return }
+        guard let _ = opMinTextFeild.text else { return }
+        guard let _ = clHTextFeild.text else { return }
+        guard let _ = clMinTextFeild.text else { return }
+        
         guard let _ = urlTextFeild.text else { return }
         guard let _ = memoTextFeild.text else { return }
         
@@ -189,14 +200,31 @@ class AddInfoViewController: UIViewController, UINavigationControllerDelegate, U
         //オプショナル型(アンラップ)
         guard let storeNameText = storeNameTextFeild.text else { return }
         guard let placeText = placeTextFeild.text else { return }
+        
+        guard let opHText = opHTextFeild.text else { return }
+        guard let opMinText = opMinTextFeild.text else { return }
+        guard let clHText = clHTextFeild.text else { return }
+        guard let clMinText = clMinTextFeild.text else { return }
+        
         guard let urlText = urlTextFeild.text else { return }
         guard let memoText = memoTextFeild.text else { return }
+        
+//        @IBOutlet var opHTextFeild: UITextField!
+//        @IBOutlet var opMinTextFeild: UITextField!
+//        @IBOutlet var clHTextFeild: UITextField!
+//        @IBOutlet var clMinTextFeild: UITextField!
         
         let item = Item()
         item.storeNameText = storeNameText
         item.placeText = placeText
         item.urlText = urlText
         item.memoText = memoText
+        
+        item.opHText = opMinText
+        item.opMinText = opMinText
+        item.clHText = clHText
+        item.clMinText = clMinText
+        
         item.hasWent = hasWent
         item.hasMirror = hasMirror
         item.hasWifi = hasWifi

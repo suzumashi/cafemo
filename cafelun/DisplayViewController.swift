@@ -16,6 +16,12 @@ class DisplayViewController: UIViewController {
     @IBOutlet var storeNameLabel: UILabel!
     @IBOutlet var ImageView: UIImageView!
     @IBOutlet var placeLabel: UILabel!
+
+    @IBOutlet var opHText: UILabel!
+    @IBOutlet var opMinText: UILabel!
+    @IBOutlet var clHText: UILabel!
+    @IBOutlet var clMinText: UILabel!
+    
     @IBOutlet var urlLabel: UILabel!
     @IBOutlet var availLable: UILabel!
     @IBOutlet var notLabel: UILabel!
@@ -37,11 +43,7 @@ class DisplayViewController: UIViewController {
         
         let object = todoItems[num]
         
-//        @objc dynamic var imageFileName: String?
 
-//        @objc dynamic var hasMirror: Bool = true
-//        @objc dynamic var hasWifi: Bool = true
-//        @objc dynamic var hasOutlet: Bool = true
         
         storeNameLabel.text = object.storeNameText
         if let imageFileName = object.imageFileName {
@@ -66,6 +68,11 @@ class DisplayViewController: UIViewController {
             return docDir.appendingPathComponent(fileName)
         }
 
+        opHText.text = object.opHText
+        opMinText.text = object.opMinText
+        clHText.text = object.clHText
+        clMinText.text = object.clMinText
+        
         placeLabel.text = object.placeText
         urlLabel.text = object.urlText
         memoLabel.text = object.memoText

@@ -116,18 +116,18 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         return 2 // 行間
     }
 
-        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("Cellがタップされた！")
-            collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
-            indexNum = indexPath.row
-            performSegue(withIdentifier: "VisitCollectionViewController", sender: nil)
-            print(indexNum)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
-        if (segue.identifier == "VisitCollectionViewController") {
-            let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
-            nextVC.num = indexNum
-        }
-    }
+//        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//            print("Cellがタップされた！")
+//            collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
+//            indexNum = indexPath.row
+//            performSegue(withIdentifier: "VisitCollectionViewController", sender: nil)
+//            print(indexNum)
+//    }
+//    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+//        if (segue.identifier == "VisitCollectionViewController") {
+//            let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
+//            nextVC.num = indexNum
+//        }
+//    }
 }

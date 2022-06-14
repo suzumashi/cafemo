@@ -18,6 +18,11 @@ class Item: Object {
     @objc dynamic var imageFileName: String?
     @objc dynamic var placeText: String = ""
     @objc dynamic var urlText: String = ""
+    
+    @objc dynamic var opHText: String = ""
+    @objc dynamic var opMinText: String = ""
+    @objc dynamic var clHText: String = ""
+    @objc dynamic var clMinText: String = ""
   
     @objc dynamic var hasWent: Bool = true
     @objc dynamic var hasMirror: Bool = true
