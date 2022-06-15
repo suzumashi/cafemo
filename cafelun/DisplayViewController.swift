@@ -22,6 +22,7 @@ class DisplayViewController: UIViewController {
     @IBOutlet var clHText: UILabel!
     @IBOutlet var clMinText: UILabel!
     
+    @IBOutlet var urlButton: UIButton!
     @IBOutlet var urlLabel: UILabel!
     @IBOutlet var availLable: UILabel!
     @IBOutlet var notLabel: UILabel!
@@ -31,6 +32,8 @@ class DisplayViewController: UIViewController {
     
     var likeLabelTo: Bool?
     var num = Int()
+    
+    let realm = try! Realm()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,9 +45,7 @@ class DisplayViewController: UIViewController {
         todoItems = realm.objects(Item.self)
         
         let object = todoItems[num]
-        
-        
-        
+
         storeNameLabel.text = object.storeNameText
         if let imageFileName = object.imageFileName {
             // 画像のパスを取得
@@ -78,9 +79,9 @@ class DisplayViewController: UIViewController {
         memoLabel.text = object.memoText
         
         if object.hasWent == true {
-            hasWentLabel.text = "行った"
-        } else {
             hasWentLabel.text = "行きたい"
+        } else {
+            hasWentLabel.text = "行った"
         }
         
         // Do any additional setup after loading the view.
@@ -90,6 +91,14 @@ class DisplayViewController: UIViewController {
     @IBAction func backBtnAction(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func terms(_ sender: Any) {
+        let object = todoItems[num]
+        let url = URL(string: object.urlText)!
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url)
+            }
+        }
     
     
     /*

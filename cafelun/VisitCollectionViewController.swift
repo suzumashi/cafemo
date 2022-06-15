@@ -130,4 +130,9 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
             nextVC.num = indexNum
         }
     }
+    
+    // ＋ボタンを押したら追加画面へ遷移
+    @IBAction func didTapButton(_ sender: UIButton){
+        performSegue(withIdentifier: "AddInfoView", sender: nil)
+    }
 }

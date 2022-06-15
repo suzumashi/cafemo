@@ -141,9 +141,9 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
     }
     
     // ＋ボタンを押したら追加画面へ遷移
-    @IBAction func didTapButton() {
-        let secondViewController = self.storyboard?.instantiateViewController(withIdentifier: "AddInfoViewController") as! AddInfoViewController
-        self.present(secondViewController, animated: true, completion: nil)
-
+    @IBAction func didTapButton(_ sender: UIButton){
+        performSegue(withIdentifier: "AddInfoView", sender: nil)
     }
+
+
 }
