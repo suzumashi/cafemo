@@ -42,7 +42,7 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
             self.collectionView.addGestureRecognizer(longPressRecognizer)
     }
     
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         getItemData()
@@ -57,7 +57,6 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
             }
         }
     
-    
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
         //保存されている配列を全て取り出す
@@ -68,6 +67,21 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
         print("reloadData")
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        var collectionNumber: Int = 0
+//            if collection.count >= 1{
+                for i in 0...collection.count - 1 {
+                    if collection[i].hasWent == true {
+                        collectionNumber += 1
+                    } else {
+                        //
+                    }
+                }
+//            } else {
+//                collectionNumber = 0
+//            }
+            return collectionNumber
+        }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
@@ -100,10 +114,6 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
         return cell
     }
     
-        func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return collection.count
-        }
-    
     // URLを取得するメソッド
     func getImageURL(fileName: String) -> URL {
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -134,6 +144,7 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        
         if (segue.identifier == "WantCollectionViewController") {
             let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
             nextVC.num = indexNum

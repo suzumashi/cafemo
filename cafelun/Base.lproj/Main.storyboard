@@ -130,118 +130,125 @@
                                     <constraint firstAttribute="width" secondItem="kxJ-G3-Pl2" secondAttribute="height" multiplier="319:641" id="zHW-FR-mex"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="6os-wM-wkY">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6os-wM-wkY">
                                 <rect key="frame" x="74.5" y="215" width="265" height="466"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCENE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-he-YZO">
-                                        <rect key="frame" x="0.0" y="0.0" width="88" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="SCENE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mUg-he-YZO">
+                                        <rect key="frame" x="0.0" y="0.0" width="88" height="42.5"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wSD-Kb-Txn">
-                                        <rect key="frame" x="0.0" y="40" width="263" height="262.5"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wSD-Kb-Txn">
+                                        <rect key="frame" x="0.0" y="52.5" width="265" height="265"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="wSD-Kb-Txn" secondAttribute="height" multiplier="265:265" id="4Rm-th-PY9"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="愛知県名古屋市中区3-20-20 2F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzi-T9-iE8">
-                                        <rect key="frame" x="0.0" y="313.5" width="182" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="愛知県名古屋市中区3-20-20 2F" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzi-T9-iE8">
+                                        <rect key="frame" x="0.0" y="327.5" width="204" height="13"/>
                                         <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://instagram.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ku8-pO-57f">
-                                        <rect key="frame" x="0.0" y="340" width="148.5" height="16.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="https://instagram.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ku8-pO-57f">
+                                        <rect key="frame" x="0.0" y="350.5" width="148.5" height="16.5"/>
                                         <fontDescription key="fontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="14"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-38-poM">
-                                        <rect key="frame" x="0.0" y="367.5" width="91.5" height="19"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="lZS-38-poM">
+                                        <rect key="frame" x="0.0" y="377" width="129" height="16"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bt0-HA-c2P">
-                                                <rect key="frame" x="0.0" y="0.0" width="16" height="19"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="22" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEh-95-wtl">
-                                                <rect key="frame" x="18" y="0.0" width="4.5" height="19"/>
+                                                <rect key="frame" x="26" y="0.0" width="5.5" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nm-eo-ff2">
-                                                <rect key="frame" x="24.5" y="0.0" width="16" height="19"/>
+                                                <rect key="frame" x="35.5" y="0.0" width="22" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3o-kP-Vnn">
-                                                <rect key="frame" x="42.5" y="0.0" width="6.5" height="19"/>
+                                                <rect key="frame" x="61.5" y="0.0" width="6" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qc8-Sn-0zd">
-                                                <rect key="frame" x="51" y="0.0" width="16" height="19"/>
+                                                <rect key="frame" x="71.5" y="0.0" width="22" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDK-Kb-ETI">
-                                                <rect key="frame" x="69" y="0.0" width="4.5" height="19"/>
+                                                <rect key="frame" x="97.5" y="0.0" width="5.5" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-dR-RAP">
-                                                <rect key="frame" x="75.5" y="0.0" width="16" height="19"/>
+                                                <rect key="frame" x="107" y="0.0" width="22" height="16"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="14"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-5R-WGH">
-                                        <rect key="frame" x="0.0" y="397.5" width="108.5" height="15.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cWc-5R-WGH">
+                                        <rect key="frame" x="0.0" y="403" width="97" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="○" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDn-zB-K14">
-                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コンセント, 鏡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVV-TX-bqp">
-                                                <rect key="frame" x="23" y="0.0" width="85.5" height="15.5"/>
+                                                <rect key="frame" x="23" y="0.0" width="74" height="15"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-Mv-ckI">
-                                        <rect key="frame" x="0.0" y="424" width="47" height="15.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="W0U-Mv-ckI">
+                                        <rect key="frame" x="0.0" y="428" width="58.5" height="15"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="×" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MuL-hS-g8C">
-                                                <rect key="frame" x="0.0" y="0.0" width="9" height="15.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="15" height="15"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="15"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wi-fi" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsl-mk-toT">
-                                                <rect key="frame" x="20" y="0.0" width="27" height="15.5"/>
+                                                <rect key="frame" x="26" y="0.0" width="32.5" height="15"/>
                                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="13"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="lo 18:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU2-xe-nzA">
-                                        <rect key="frame" x="0.0" y="450.5" width="46.5" height="15.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="lo 18:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU2-xe-nzA">
+                                        <rect key="frame" x="0.0" y="453" width="65.5" height="13"/>
                                         <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="wSD-Kb-Txn" firstAttribute="leading" secondItem="6os-wM-wkY" secondAttribute="leading" id="VU8-wG-aFL"/>
+                                    <constraint firstAttribute="trailing" secondItem="wSD-Kb-Txn" secondAttribute="trailing" id="vMT-RN-gFA"/>
+                                </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="95K-nc-buj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
@@ -254,7 +261,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSv-Xf-GKi">
-                                <rect key="frame" x="12" y="44" width="39" height="43.5"/>
+                                <rect key="frame" x="12" y="44" width="49" height="39"/>
                                 <color key="tintColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="×">
@@ -266,13 +273,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="行った" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R7z-2D-PeX">
-                                <rect key="frame" x="177" y="52" width="60" height="23.5"/>
+                                <rect key="frame" x="183" y="52" width="48.5" height="20"/>
                                 <fontDescription key="fontDescription" name="NicoMoji+" family="NicoMoji+" pointSize="20"/>
                                 <color key="textColor" red="0.1019607843" green="0.1058823529" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ztu-zJ-nFv">
-                                <rect key="frame" x="76" y="548" width="24" height="48"/>
+                                <rect key="frame" x="74" y="689" width="256" height="14"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title=""/>

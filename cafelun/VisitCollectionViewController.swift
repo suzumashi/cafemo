@@ -53,7 +53,19 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        collection.count
+        var collectionNumber: Int = 0
+//            if collection.count >= 1{
+                for i in 0...collection.count - 1 {
+                    if collection[i].hasWent == false {
+                        collectionNumber += 1
+                    } else {
+                        //
+                    }
+                }
+//            } else {
+//                collectionNumber = 0
+//            }
+            return collectionNumber
         }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -99,7 +111,6 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
 //
 //    }
 
-    
     // URLを取得するメソッド
     func getImageURL(fileName: String) -> URL {
         let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -128,6 +139,8 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         if (segue.identifier == "VisitCollectionViewController") {
             let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
             nextVC.num = indexNum
+            print(nextVC.num
+            )
         }
     }
     
