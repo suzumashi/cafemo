@@ -12,6 +12,7 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
     
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var addButton: UIButton!
+    @IBOutlet var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     let realm = try! Realm()
     
@@ -136,7 +137,7 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
         if (segue.identifier == "WantCollectionViewController") {
             let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
             nextVC.num = indexNum
-
+            print(nextVC.num)
         }
     }
     

@@ -24,6 +24,24 @@
 		E68BB9BD28588021005E438E /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E68BB9BC28588021005E438E /* DisplayViewController.swift */; };
 		E68BB9C12858E06A005E438E /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E68BB9C02858E06A005E438E /* bg.png */; };
 		E6C22BED283BCF3D00BC5FFF /* AddInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */; };
+		E6D8330028599AFC00784C7D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E6D832FF28599AFC00784C7D /* icon.png */; };
+		E6D833022859ABB400784C7D /* neko.PNG in Resources */ = {isa = PBXBuildFile; fileRef = E6D833012859ABB400784C7D /* neko.PNG */; };
+		E6E12FD62859E38C008E21A2 /* Icon-App-76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FC62859E38C008E21A2 /* Icon-App-76x76@2x.png */; };
+		E6E12FD72859E38C008E21A2 /* Icon-App-29x29@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FC72859E38C008E21A2 /* Icon-App-29x29@1x.png */; };
+		E6E12FD82859E38C008E21A2 /* Icon-App-40x40@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FC82859E38C008E21A2 /* Icon-App-40x40@1x.png */; };
+		E6E12FD92859E38C008E21A2 /* Icon-App-20x20@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FC92859E38C008E21A2 /* Icon-App-20x20@1x.png */; };
+		E6E12FDA2859E38C008E21A2 /* Icon-App-83.5x83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCA2859E38C008E21A2 /* Icon-App-83.5x83.5@2x.png */; };
+		E6E12FDB2859E38C008E21A2 /* Icon-App-20x20@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCB2859E38C008E21A2 /* Icon-App-20x20@3x.png */; };
+		E6E12FDC2859E38C008E21A2 /* ItunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCC2859E38C008E21A2 /* ItunesArtwork@2x.png */; };
+		E6E12FDD2859E38C008E21A2 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCD2859E38C008E21A2 /* Contents.json */; };
+		E6E12FDE2859E38C008E21A2 /* Icon-App-20x20@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCE2859E38C008E21A2 /* Icon-App-20x20@2x.png */; };
+		E6E12FDF2859E38C008E21A2 /* Icon-App-29x29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FCF2859E38C008E21A2 /* Icon-App-29x29@3x.png */; };
+		E6E12FE02859E38C008E21A2 /* Icon-App-40x40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD02859E38C008E21A2 /* Icon-App-40x40@2x.png */; };
+		E6E12FE12859E38C008E21A2 /* Icon-App-60x60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD12859E38C008E21A2 /* Icon-App-60x60@3x.png */; };
+		E6E12FE22859E38C008E21A2 /* Icon-App-60x60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD22859E38C008E21A2 /* Icon-App-60x60@2x.png */; };
+		E6E12FE32859E38C008E21A2 /* Icon-App-76x76@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD32859E38C008E21A2 /* Icon-App-76x76@1x.png */; };
+		E6E12FE42859E38C008E21A2 /* Icon-App-40x40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD42859E38C008E21A2 /* Icon-App-40x40@3x.png */; };
+		E6E12FE52859E38C008E21A2 /* Icon-App-29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E6E12FD52859E38C008E21A2 /* Icon-App-29x29@2x.png */; };
 		E6F4D9322839D9B3007F39AA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9312839D9B3007F39AA /* AppDelegate.swift */; };
 		E6F4D9342839D9B3007F39AA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */; };
 		E6F4D9362839D9B3007F39AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F4D9352839D9B3007F39AA /* ViewController.swift */; };
@@ -71,6 +89,24 @@
 		E68BB9BC28588021005E438E /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		E68BB9C02858E06A005E438E /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInfoViewController.swift; sourceTree = "<group>"; };
+		E6D832FF28599AFC00784C7D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		E6D833012859ABB400784C7D /* neko.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = neko.PNG; sourceTree = "<group>"; };
+		E6E12FC62859E38C008E21A2 /* Icon-App-76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@2x.png"; sourceTree = "<group>"; };
+		E6E12FC72859E38C008E21A2 /* Icon-App-29x29@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@1x.png"; sourceTree = "<group>"; };
+		E6E12FC82859E38C008E21A2 /* Icon-App-40x40@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@1x.png"; sourceTree = "<group>"; };
+		E6E12FC92859E38C008E21A2 /* Icon-App-20x20@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@1x.png"; sourceTree = "<group>"; };
+		E6E12FCA2859E38C008E21A2 /* Icon-App-83.5x83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-83.5x83.5@2x.png"; sourceTree = "<group>"; };
+		E6E12FCB2859E38C008E21A2 /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		E6E12FCC2859E38C008E21A2 /* ItunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ItunesArtwork@2x.png"; sourceTree = "<group>"; };
+		E6E12FCD2859E38C008E21A2 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
+		E6E12FCE2859E38C008E21A2 /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		E6E12FCF2859E38C008E21A2 /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		E6E12FD02859E38C008E21A2 /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		E6E12FD12859E38C008E21A2 /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
+		E6E12FD22859E38C008E21A2 /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		E6E12FD32859E38C008E21A2 /* Icon-App-76x76@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-76x76@1x.png"; sourceTree = "<group>"; };
+		E6E12FD42859E38C008E21A2 /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		E6E12FD52859E38C008E21A2 /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
 		E6F4D92E2839D9B3007F39AA /* cafelun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cafelun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F4D9312839D9B3007F39AA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6F4D9332839D9B3007F39AA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +190,29 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		E6E12FC52859E38C008E21A2 /* AppIcon.appiconset */ = {
+			isa = PBXGroup;
+			children = (
+				E6E12FC62859E38C008E21A2 /* Icon-App-76x76@2x.png */,
+				E6E12FC72859E38C008E21A2 /* Icon-App-29x29@1x.png */,
+				E6E12FC82859E38C008E21A2 /* Icon-App-40x40@1x.png */,
+				E6E12FC92859E38C008E21A2 /* Icon-App-20x20@1x.png */,
+				E6E12FCA2859E38C008E21A2 /* Icon-App-83.5x83.5@2x.png */,
+				E6E12FCB2859E38C008E21A2 /* Icon-App-20x20@3x.png */,
+				E6E12FCC2859E38C008E21A2 /* ItunesArtwork@2x.png */,
+				E6E12FCD2859E38C008E21A2 /* Contents.json */,
+				E6E12FCE2859E38C008E21A2 /* Icon-App-20x20@2x.png */,
+				E6E12FCF2859E38C008E21A2 /* Icon-App-29x29@3x.png */,
+				E6E12FD02859E38C008E21A2 /* Icon-App-40x40@2x.png */,
+				E6E12FD12859E38C008E21A2 /* Icon-App-60x60@3x.png */,
+				E6E12FD22859E38C008E21A2 /* Icon-App-60x60@2x.png */,
+				E6E12FD32859E38C008E21A2 /* Icon-App-76x76@1x.png */,
+				E6E12FD42859E38C008E21A2 /* Icon-App-40x40@3x.png */,
+				E6E12FD52859E38C008E21A2 /* Icon-App-29x29@2x.png */,
+			);
+			path = AppIcon.appiconset;
+			sourceTree = "<group>";
+		};
 		E6F4D9252839D9B3007F39AA = {
 			isa = PBXGroup;
 			children = (
@@ -185,8 +244,10 @@
 				E6F4D96F2839E473007F39AA /* WantCollectionViewController.swift */,
 				E6C22BEC283BCF3D00BC5FFF /* AddInfoViewController.swift */,
 				E68BB9BC28588021005E438E /* DisplayViewController.swift */,
+				E6D832FF28599AFC00784C7D /* icon.png */,
 				E6728C5428406724000443AD /* Models */,
 				E6F4D9372839D9B3007F39AA /* Main.storyboard */,
+				E6E12FC52859E38C008E21A2 /* AppIcon.appiconset */,
 				E6F4D93A2839D9B4007F39AA /* Assets.xcassets */,
 				E6F4D93C2839D9B4007F39AA /* LaunchScreen.storyboard */,
 				E6F4D93F2839D9B4007F39AA /* Info.plist */,
@@ -223,6 +284,7 @@
 		E6F4D9622839DFA0007F39AA /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				E6D833012859ABB400784C7D /* neko.PNG */,
 				E648BD07283F4096001ACCE4 /* cameraIcon.PNG */,
 				E648BCEF283DE46D001ACCE4 /* saveButton.PNG */,
 				E68BB9C02858E06A005E438E /* bg.png */,
@@ -344,21 +406,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6E12FDA2859E38C008E21A2 /* Icon-App-83.5x83.5@2x.png in Resources */,
+				E6E12FE02859E38C008E21A2 /* Icon-App-40x40@2x.png in Resources */,
 				E6F4D93E2839D9B4007F39AA /* LaunchScreen.storyboard in Resources */,
+				E6E12FE42859E38C008E21A2 /* Icon-App-40x40@3x.png in Resources */,
 				E6728C512840671B000443AD /* README_E in Resources */,
 				E68BB9C12858E06A005E438E /* bg.png in Resources */,
 				E648BCF0283DE46D001ACCE4 /* saveButton.PNG in Resources */,
 				E6F4D976283A2E06007F39AA /* plusButton.PNG in Resources */,
+				E6E12FE32859E38C008E21A2 /* Icon-App-76x76@1x.png in Resources */,
 				E6728C532840671B000443AD /* LICENSE_J in Resources */,
+				E6E12FDD2859E38C008E21A2 /* Contents.json in Resources */,
 				E648BD08283F4096001ACCE4 /* cameraIcon.PNG in Resources */,
+				E6E12FDF2859E38C008E21A2 /* Icon-App-29x29@3x.png in Resources */,
 				E6F4D93B2839D9B4007F39AA /* Assets.xcassets in Resources */,
+				E6E12FDC2859E38C008E21A2 /* ItunesArtwork@2x.png in Resources */,
 				E6728C4D2840671B000443AD /* 利用前にお読みください.txt in Resources */,
+				E6E12FD92859E38C008E21A2 /* Icon-App-20x20@1x.png in Resources */,
+				E6E12FE22859E38C008E21A2 /* Icon-App-60x60@2x.png in Resources */,
+				E6E12FDB2859E38C008E21A2 /* Icon-App-20x20@3x.png in Resources */,
+				E6E12FD82859E38C008E21A2 /* Icon-App-40x40@1x.png in Resources */,
 				E6F4D9392839D9B3007F39AA /* Main.storyboard in Resources */,
+				E6D833022859ABB400784C7D /* neko.PNG in Resources */,
 				E6728C522840671B000443AD /* LICENSE_E in Resources */,
+				E6E12FD62859E38C008E21A2 /* Icon-App-76x76@2x.png in Resources */,
+				E6E12FE52859E38C008E21A2 /* Icon-App-29x29@2x.png in Resources */,
+				E6E12FE12859E38C008E21A2 /* Icon-App-60x60@3x.png in Resources */,
 				E6728C502840671B000443AD /* README_J in Resources */,
 				E6728C4F2840671B000443AD /* nicomoji-plus_1.11.ttf in Resources */,
+				E6E12FD72859E38C008E21A2 /* Icon-App-29x29@1x.png in Resources */,
 				E6728C4E2840671B000443AD /* 【源柔ゴシック・源ノ角ゴシック】Apache License 2.0.txt in Resources */,
+				E6E12FDE2859E38C008E21A2 /* Icon-App-20x20@2x.png in Resources */,
 				E648BD0B283F4350001ACCE4 /* want.PNG in Resources */,
+				E6D8330028599AFC00784C7D /* icon.png in Resources */,
 				E648BD0C283F4350001ACCE4 /* went.PNG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
