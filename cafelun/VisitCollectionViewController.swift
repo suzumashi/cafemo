@@ -44,6 +44,7 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         getItemData()
     }
     
+    
     // Realmからデータを取得してテーブルビューを再リロードするメソッド
     func getItemData() {
         //保存されている配列を全て取り出す
@@ -53,19 +54,20 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        var collectionNumber: Int = 0
+        collection.count
+//        var collectionNumber: Int = 0
 //            if collection.count >= 1{
-                for i in 0...collection.count - 1 {
-                    if collection[i].hasWent == false {
-                        collectionNumber += 1
-                    } else {
-                        //
-                    }
-                }
+//                for i in 0...collection.count - 1 {
+//                    if collection[i].hasWent == false {
+//                        collectionNumber += 1
+//                    } else {
+//                        //
+//                    }
+//                }
 //            } else {
 //                collectionNumber = 0
 //            }
-            return collectionNumber
+//            return collectionNumber
         }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,7 +76,7 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         
         let item = collection[indexPath.row]
         
-        if item.hasWent == false {
+//        if item.hasWent == false {
             if let imageFileName = item.imageFileName {
                 // 画像のパスを取得
                 let path = getImageURL(fileName: imageFileName).path
@@ -90,9 +92,9 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
                     print("Image file not found. path")
                 }
             }
-        } else {
-            print("VisitCollection")
-        }
+//        } else {
+//            print("VisitCollection")
+//        }
         return cell
     }
     
@@ -139,8 +141,6 @@ class VisitCollectionViewController: UIViewController, UICollectionViewDataSourc
         if (segue.identifier == "VisitCollectionViewController") {
             let nextVC: DisplayViewController = (segue.destination as? DisplayViewController)!
             nextVC.num = indexNum
-            print(nextVC.num
-            )
         }
     }
     

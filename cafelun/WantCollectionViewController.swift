@@ -69,7 +69,7 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         var collectionNumber: Int = 0
-//            if collection.count >= 1{
+            if collection.count >= 1{
                 for i in 0...collection.count - 1 {
                     if collection[i].hasWent == true {
                         collectionNumber += 1
@@ -77,9 +77,9 @@ class WantCollectionViewController: UIViewController, UICollectionViewDataSource
                         //
                     }
                 }
-//            } else {
-//                collectionNumber = 0
-//            }
+            } else {
+                collectionNumber = 0
+            }
             return collectionNumber
         }
     

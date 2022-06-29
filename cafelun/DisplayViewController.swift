@@ -22,12 +22,19 @@ class DisplayViewController: UIViewController {
     @IBOutlet var clHText: UILabel!
     @IBOutlet var clMinText: UILabel!
     
+    @IBOutlet var hasMirrorLabel: UILabel!
+    @IBOutlet var hasWifiLabel: UILabel!
+    @IBOutlet var hasOutletLabel: UILabel!
+    @IBOutlet var noMirrorLabel: UILabel!
+    @IBOutlet var noWifiLabel: UILabel!
+    @IBOutlet var noOutletLabel: UILabel!
+    
     @IBOutlet var urlButton: UIButton!
     @IBOutlet var urlLabel: UILabel!
     @IBOutlet var availLable: UILabel!
     @IBOutlet var notLabel: UILabel!
     @IBOutlet var memoLabel: UILabel!
-    
+
     @IBOutlet var backButton: UIButton!
     
     var likeLabelTo: Bool?
@@ -68,14 +75,34 @@ class DisplayViewController: UIViewController {
             let docDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
             return docDir.appendingPathComponent(fileName)
         }
+
+        
+        if object.hasMirror == true {
+            hasMirrorLabel.text = "鏡"
+        } else {
+            noMirrorLabel.text = "鏡"
+        }
+        
+        if object.hasWifi == true {
+            hasWifiLabel.text = "Wi-Fi"
+        } else {
+            noWifiLabel.text = "Wi-Fi"
+        }
+        
+        if object.hasOutlet == true {
+            hasOutletLabel.text = "コンセント"
+        } else {
+            noOutletLabel.text = "コンセント"
+        }
         
         opHText.text = object.opHText
         opMinText.text = object.opMinText
         clHText.text = object.clHText
         clMinText.text = object.clMinText
         
-        placeLabel.text = object.placeText
-        urlLabel.text = object.urlText
+//        placeLabel.text = object.placeText
+//        urlLabel.text = object.urlText
+        urlButton.setTitle(object.urlText, for: .normal)
         memoLabel.text = object.memoText
         
         if object.hasWent == true {
